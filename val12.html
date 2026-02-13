@@ -164,10 +164,30 @@ Lewi ❤️
 </div>
 
 <audio id="bg-music" loop>
-<source src="golden-brown1.mp3" type="audio/mpeg">
+  <source src="golden-brown1.mp3" type="audio/mpeg">
 </audio>
 
 <button class="music-btn" onclick="toggleMusic()">Play Music</button>
+
+<script>
+const audio = document.getElementById('bg-music');
+
+// Play music on first click anywhere on the page
+document.addEventListener('click', () => {
+  if (audio.paused) {
+    audio.play();
+  }
+}, { once: true });
+
+// Optional: toggle button for pause/play
+function toggleMusic() {
+  if (audio.paused) {
+    audio.play();
+  } else {
+    audio.pause();
+  }
+}
+</script>
 
 <script>
 // Show reason
