@@ -103,10 +103,10 @@ h2 {
 
 <body>
 
-<h1>Happy Valentine's Day ❤️ HER_NAME</h1>
+<h1>Happy Valentine's Day ❤️ My Love </h1>
 
 <div class="section">
-<h2>Our Memories</h2>
+<h2>My Fav person in the whole world 😘❤️</h2>
 <div class="gallery">
 <img src="photo1.jpg">
 <img src="photo2.jpg">
@@ -117,8 +117,29 @@ h2 {
 <div class="section">
 <h2>My Love Letter</h2>
 <div class="letter">
-Write your full romantic message here.  
-You can make this as long as you want.
+My Love,
+
+Happy Valentine’s Day ❤️
+
+Sometimes I sit and think about how strange and beautiful it is that, out of all the people in this world, I found you. Or maybe it’s more accurate to say that we found each other. Even with the distance between us, you have become one of the most important parts of my life. And that’s not something I take lightly.
+
+Loving you from afar has taught me something powerful — that love isn’t just about being physically close. It’s about choosing someone every single day. It’s about patience, trust, communication, and believing in something bigger than temporary distance. And I choose you. Every day.
+
+There are moments when I wish I could just reach out and hold your hand. When I wish I could see your smile in person instead of through a screen. But even through the distance, you manage to make my days brighter. Your voice calms me. Your laughter stays in my mind long after our calls end. Your presence, even from miles away, feels real and comforting.
+
+What I admire most about you isn’t just how beautiful you are — it’s your heart. Your kindness. Your strength. The way you care. The way you support me. The way you believe in me even when I doubt myself. You inspire me to become better — not because you ask me to, but because loving you makes me want to grow.
+
+I’m grateful for every conversation, every joke, every late-night talk, every small moment we share. They may seem simple, but to me, they matter more than you probably realize.
+
+This distance is temporary. It’s just a chapter — not the whole story. And one day, when we look back at this time, we’ll be proud of ourselves for staying strong and choosing each other despite everything.
+
+Until the day I can see you, hug you, and tell you all of this in person, I want you to remember something: you are loved deeply, intentionally, and sincerely. Not just today, but every day.
+
+Happy Valentine’s Day, my love.
+You mean more to me than words can fully capture.
+
+Always yours,
+Lewi ❤️
 </div>
 </div>
 
@@ -136,12 +157,12 @@ You can make this as long as you want.
 </div>
 
 <div class="section">
-<h2>Countdown Until We Meet Again</h2>
+<h2>Countdown Until We Meet</h2>
 <div id="countdown"></div>
 </div>
 
 <audio id="bg-music" loop>
-<source src="music.mp3" type="audio/mpeg">
+<source src="golden-brown1.mp3" type="audio/mpeg">
 </audio>
 
 <button class="music-btn" onclick="toggleMusic()">Play Music</button>
@@ -179,14 +200,16 @@ function toggleMusic(){
 }
 
 // Floating hearts
-setInterval(function(){
-    var heart = document.createElement("div");
-    heart.className="heart";
-    heart.style.left=Math.random()*100+"vw";
-    heart.innerHTML="❤️";
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (Math.random() * 3 + 5) + "s";
     document.body.appendChild(heart);
-    setTimeout(()=>heart.remove(),6000);
-},500);
+    setTimeout(() => { heart.remove(); }, 8000);
+}
+setInterval(createHeart, 500);
 </script>
 
 </body>
